@@ -13,6 +13,7 @@ class BooksController < ApplicationController
 					}
 				end
 			end
+			format.csv {render plain: Book.generate_csv(@books)}
 		end
 	end
 
